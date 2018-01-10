@@ -69,7 +69,7 @@ var getTasks = module.exports.tasks = function (options) {
       //Append CliDir if necessary
       gruntCmd = gruntCliDir === "" ? gruntCmd : gruntCliDir + " " + gruntCmd;
       var child = spawn(
-        gruntCliDir + gruntCmd,
+        gruntCmd,
         args,
         {cwd: cwd}
       );
