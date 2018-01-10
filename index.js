@@ -64,10 +64,7 @@ var getTasks = module.exports.tasks = function (options) {
           args = args.concat('--' + key + '=' + opt[key]);
         }
       }
-      //Reset gruntCmd
-      gruntCmd = (process.platform === 'win32') ? 'grunt.cmd' : 'grunt';
-      //Append CliDir if necessary
-      gruntCmd = gruntCliDir === "" ? gruntCmd : gruntCliDir + " " + gruntCmd;
+      
       var child = spawn(
         gruntCmd,
         args,
